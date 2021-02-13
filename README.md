@@ -8,9 +8,8 @@ struct ContentView: View {
     @ObservedObject var config = AppConfig() // whatever ur config is
 
     var body: some View {
-        // 
         WebView(config: config)
-            .background(bg)
+            .background(Color.black)
             .ignoresSafeArea(.all)
             .onAppear {
 
