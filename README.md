@@ -1,5 +1,26 @@
 # NotPWA2
 
+### SwiftUI Layout
+
+```
+struct ContentView: View {
+
+    @ObservedObject var config = AppConfig() // whatever ur config is
+
+    var body: some View {
+        // 
+        WebView(config: config)
+            .background(bg)
+            .ignoresSafeArea(.all)
+            .onAppear {
+
+            }
+            // settings you will likely want if you use Geeky React stack v2+
+    }
+
+}
+```
+
 ### Config Usage
 
 ```
@@ -24,6 +45,7 @@ struct ContactsResult {
 
 class AppConfig: WebAppConfiguration {
     override var url: URL? { URL(string: "https://geekyinteractive.com") }
+    override var debug: Bool { true }
     override var scrollManagedByApp: Bool { true }
 
     override func recieveRequest(request: Request, completion: Response) {
@@ -42,5 +64,3 @@ class AppConfig: WebAppConfiguration {
     }
 }
 ```
-
-A description of this package.
