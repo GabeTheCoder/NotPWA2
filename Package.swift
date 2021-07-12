@@ -10,6 +10,6 @@ let package = Package(
     targets: [
         .binaryTarget(name: "NotPWA2",
                       url: "https://components.geekyinteractive.com/NotPWA2/NotPWA2-1.0.9.xcframework.zip",
-                      checksum: "8c4a75f797a70bc0b46ef8da0ad53b5155915d2730907068f594679da2f754ba")
+                      checksum: "8be640349382143a0e2d96d5267322397d2ba1f82d2f286b26c0daea149771ca")
     ]
 )
